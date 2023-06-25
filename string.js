@@ -93,14 +93,63 @@ function split() {
     console.assert(arr2[1] === 'i');
 }
 
-slice();
-substring();
-substr();
-length();
-replace();
-replaceAll();
-object();
-charAt();
-split();
+function match() {
+    const str = 'hello';
 
+    // match the letter 'l' globally using regex
+    const arr = str.match(/l/g);
+    console.assert(arr.length === 2);
+    console.assert(arr[0] == 'l');
+    console.assert(arr[1] == 'l');
+}
+
+function includes() {
+    const str = 'hello';
+
+    console.assert(str.includes(''));
+    console.assert(str.includes('lo'));
+    console.assert(str.includes('hello'));
+    console.assert(!str.includes('test'));
+    console.assert(!str.includes('hi'));
+}
+
+function startsWith() {
+    const str = 'hello';
+
+    console.assert(str.startsWith('he'));
+    console.assert(!str.startsWith('lo'));
+}
+
+function templateLiteral() {
+    // string interpolation using ` (backtick) and ${var}
+    const str = 'hello';
+    const str2 = `${str}, world!`;
+
+    console.assert(str2 == 'hello, world!');
+
+    // ` can also create multi-line strings
+    const multiLineString =
+`Line 1
+Line 2`
+
+    console.assert(multiLineString == 'Line 1\nLine 2');
+}
+
+function test() {
+    slice();
+    substring();
+    substr();
+    length();
+    replace();
+    replaceAll();
+    object();
+    charAt();
+    split();
+    match();
+    includes();
+    startsWith();
+    templateLiteral();
+}
+
+test();
 console.log('Tests passed!')
