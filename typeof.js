@@ -1,6 +1,9 @@
+// typeof returns type of variable
+
 function typeofBasic() {
     console.assert(typeof 'text' == 'string');
-    console.assert(typeof 3.14 == 'number');
+    console.assert(typeof 3 == 'number');
+    console.assert(typeof 3.14 == 'number'); // all numbers are double-precision
     console.assert(typeof [1, 2] == 'object');
     console.assert(typeof {a: 1, b: 2} == 'object');
     console.assert(typeof function () {} == 'function');
