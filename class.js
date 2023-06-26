@@ -18,6 +18,11 @@ class Rectangle {
         return this.getArea();
     }
 
+    set width(width) {
+        // width setter for private property
+        this.#width = width;
+    }
+
     // getArea method
     getArea() {
         return this.#height * this.#width;
@@ -37,6 +42,10 @@ function test() {
 
     // method syntax
     console.assert(rect.getArea() == 20);
+
+    // update width using setter method
+    rect.width = 10;
+    console.assert(rect.getArea() == 50);
 }
 
 test();
