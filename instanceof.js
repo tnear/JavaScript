@@ -16,9 +16,15 @@ function classSyntax() {
     console.assert(!(p instanceof String));
 }
 
+function array() {
+    const arr = [1, 2]
+    console.assert(arr instanceof Array);
+}
+
 function test() {
     string();
     classSyntax();
+    array();
 }
 
 test();

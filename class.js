@@ -34,18 +34,18 @@ function test() {
 
     // public fields (using private fields ('#') outside of 
     // class definition throws a runtime error)
-    console.assert(rect.publicHeight == 5);
-    console.assert(rect.publicWidth == 4);
+    console.assert(rect.publicHeight === 5);
+    console.assert(rect.publicWidth === 4);
     
     // 'get area' access via property
-    console.assert(rect.area == 20);
+    console.assert(rect.area === 20);
 
     // method syntax
-    console.assert(rect.getArea() == 20);
+    console.assert(rect.getArea() === 20);
 
     // update width using setter method
     rect.width = 10;
-    console.assert(rect.getArea() == 50);
+    console.assert(rect.getArea() === 50);
 }
 
 test();
