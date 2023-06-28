@@ -153,4 +153,4 @@ function test() {
 }
 
 test();
-console.log('Tests passed!')
+console.log('Tests passed!');
