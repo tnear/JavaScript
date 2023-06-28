@@ -1,7 +1,7 @@
 class Rectangle {
     // private properties are prefixed with '#' (hash names)
     #height = 0; // default value
-    #width       // no default value
+    #width;      // no default value
 
     // constructor for class (note: destructors do not exist in JS)
     constructor(height, width) {
@@ -30,7 +30,7 @@ class Rectangle {
 }
 
 function test() {
-    rect = new Rectangle(5, 4);
+    const rect = new Rectangle(5, 4);
 
     // public fields (using private fields ('#') outside of 
     // class definition throws a runtime error)

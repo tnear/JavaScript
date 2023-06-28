@@ -17,7 +17,7 @@ function classSyntax() {
 }
 
 function array() {
-    const arr = [1, 2]
+    const arr = [1, 2];
     console.assert(arr instanceof Array);
 }
 

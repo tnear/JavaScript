@@ -5,7 +5,7 @@ function chaining() {
         Attributes: {
             Name: 'Chaining'
         }
-    }
+    };
 
     // ?. checks if property/function exists
 

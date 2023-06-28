@@ -29,6 +29,7 @@ module.exports = {
         "no-duplicate-imports": "error",
         "no-shadow": "error",
         "no-useless-concat": "error",
-        "no-use-before-define": "error"
+        "no-use-before-define": "error",
+        "semi": ["error", "always"],
     }
-}
+};

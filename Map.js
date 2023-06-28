@@ -5,7 +5,7 @@ function size() {
 
 function constructor() {
     // use array to initialize values
-    let m = new Map([['a', 1], ['b', 2]]);
+    const m = new Map([['a', 1], ['b', 2]]);
     console.assert(m.size === 2);
 }
 
@@ -57,7 +57,7 @@ function entries() {
     m.set('B', 2);
 
     // entries() returns an iteraor object with [key, value]
-    let elems = []
+    let elems = [];
     for (const elem of m.entries()) {
         console.assert(typeof elem === 'object');
         elems.push(elem[0]);
@@ -76,14 +76,14 @@ function keys() {
     m.set('A', 1);
     m.set('B', 2);
 
-    let keys = []
+    let keyList = [];
     for (const key of m.keys()) {
-        keys.push(key);
+        keyList.push(key);
     }
 
-    console.assert(keys.length === 2);
-    console.assert(keys[0] === 'A');
-    console.assert(keys[1] === 'B');
+    console.assert(keyList.length === 2);
+    console.assert(keyList[0] === 'A');
+    console.assert(keyList[1] === 'B');
 }
 
 function values() {
@@ -91,14 +91,28 @@ function values() {
     m.set('A', 1);
     m.set('B', 2);
 
-    let values = []
+    let valueList = [];
     for (const value of m.values()) {
-        values.push(value);
+        valueList.push(value);
     }
 
-    console.assert(values.length === 2);
-    console.assert(values[0] === 1);
-    console.assert(values[1] === 2);
+    console.assert(valueList.length === 2);
+    console.assert(valueList[0] === 1);
+    console.assert(valueList[1] === 2);
+}
+
+function iterate() {
+    const m = new Map([['a', 1], ['b', 2]]);
+
+    let result = [];
+    // iterating through a map return both <key, value>
+    for (const elem of m) {
+        result.push(elem);
+    }
+
+    // result === [ ['a', 1], ['b', 2] ]
+    console.assert(result[0].toString() === 'a,1');
+    console.assert(result[1].toString() === 'b,2');
 }
 
 function test() {
@@ -111,6 +125,7 @@ function test() {
     entries();
     keys();
     values();
+    iterate();
 }
 
 test();

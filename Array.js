@@ -169,6 +169,51 @@ function map() {
     console.assert(squareStr === '4,1,9,16');
 }
 
+function filter() {
+    const arr = [1, 2, 3, 4, 5];
+    const even = arr.filter(elem => elem % 2 === 0);
+    console.assert(even.toString() === '2,4');
+}
+
+function reduce() {
+    const arr = [1, 2, 3, 4, 5];
+    const sum = arr.reduce( (total, value) => total += value);
+    console.assert(sum === 15);
+}
+
+function some() {
+    const arr = [-1, 2, -3];
+
+    // check if there are any numbers >= 0
+    const any = arr.some(elem => elem >= 0);
+    console.assert(any);
+}
+
+function constArray() {
+    const arr = [1, 2];
+
+    // const on array means array cannot be reassigned:
+    // arr = [3, 4] // error!
+
+    // ...but elements within in an array can be modified:
+    arr[0] = 3;
+    console.assert(arr[0] === 3);
+    console.assert(arr[1] === 2);
+}
+
+function iterate() {
+    const arr = [1, 2, 3];
+
+    let elems = [];
+
+    // use for..of to iterate through an array (or string)
+    for (const elem of arr) {
+        elems.push(elem);
+    }
+
+    console.assert(elems.toString() === '1,2,3');
+}
+
 function test() {
     push();
     pop();
@@ -186,6 +231,11 @@ function test() {
     sortCompareFunction();
     reverse();
     map();
+    filter();
+    reduce();
+    some();
+    constArray();
+    iterate();
 }
 
 test();

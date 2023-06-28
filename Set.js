@@ -60,14 +60,25 @@ function values() {
     s.add(1);
     s.add(2);
 
-    let values = []
+    let valueList = [];
     for (const value of s.values()) {
-        values.push(value);
+        valueList.push(value);
     }
 
-    console.assert(values.length === 2);
-    console.assert(values[0] === 1);
-    console.assert(values[1] === 2);
+    console.assert(valueList.length === 2);
+    console.assert(valueList[0] === 1);
+    console.assert(valueList[1] === 2);
+}
+
+function iterate() {
+    const letters = new Set(['a', 'b', 'c']);
+
+    let result = [];
+    for (const letter of letters) {
+        result.push(letter);
+    }
+
+    console.assert(result.toString() === 'a,b,c');
 }
 
 function test() {
@@ -78,6 +89,7 @@ function test() {
     clear();
     has();
     values();
+    iterate();
 }
 
 test();

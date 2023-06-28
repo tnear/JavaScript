@@ -131,7 +131,7 @@ function templateLiteral() {
     // ` can also create multi-line strings
     const multiLineString =
 `Line 1
-Line 2`
+Line 2`;
 
     console.assert(multiLineString === 'Line 1\nLine 2');
 }
