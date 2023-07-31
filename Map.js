@@ -56,7 +56,7 @@ function entries() {
     m.set('A', 1);
     m.set('B', 2);
 
-    // entries() returns an iteraor object with [key, value]
+    // entries() returns an iterator object with [key, value]
     let elems = [];
     for (const elem of m.entries()) {
         console.assert(typeof elem === 'object');

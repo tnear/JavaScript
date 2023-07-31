@@ -1,4 +1,4 @@
-// Numbers in JavaScript are double-precision floating-poit numbers
+// Numbers in JavaScript are double-precision floating-point numbers
 
 function double() {
     console.assert(1 === 1.0);

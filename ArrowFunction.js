@@ -21,4 +21,4 @@ function test() {
 }
 
 test();
-console.log('Tests passsed!');
+console.log('Tests passed!');
