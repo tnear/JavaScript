@@ -21,7 +21,7 @@ function substring() {
     const str = 'hello';
 
     console.assert(str.substring(0, 2) === 'he');
-    
+
     // not supported, negative values are treated as zero, which returns entire string
     console.assert(str.substring(-1) === 'hello');
 }
@@ -74,7 +74,7 @@ function charAt() {
     console.assert(str[0] === 'h');
 
     // functional style (safer)
-    console.assert(str.charAt(0) === 'h');    
+    console.assert(str.charAt(0) === 'h');
 }
 
 function split() {

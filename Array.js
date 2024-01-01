@@ -13,14 +13,14 @@ function pop() {
     let arr = [1, 2, 3];
     arr.pop();
 
-    // pop returns last element
+    // pop also returns last element
     const val = arr.pop();
     console.assert(val === 2);
-
     console.assert(arr.length === 1);
+
     arr.pop();
     console.assert(arr.length === 0);
-    
+
     // pop on empty does nothing
     arr.pop();
     console.assert(arr.length === 0);
@@ -65,7 +65,7 @@ function concat() {
 
     const newArray = arr1.concat(arr2);
     console.assert(newArray.length === 5);
-    
+
     // verify first and last element
     console.assert(newArray[0] === 1);
     console.assert(newArray.slice(-1)[0] === 5);
@@ -73,7 +73,7 @@ function concat() {
 
 function flat() {
     // flatten higher dimensions down to array
-    const arr = [ [1, 2], [3, 4] ];
+    const arr = [[1, 2], [3, 4]];
     const flatArr = arr.flat();
     console.assert(flatArr[0] === 1);
     console.assert(flatArr[1] === 2);
@@ -82,18 +82,16 @@ function flat() {
 }
 
 function slice() {
-    // slice slices out a piece of an array
+    // extract piece of an array
 
     // one arg example:
     // starts at index 2 and slices until end of array
     const arr = [2, 3, 4, 5];
     const slicedArray = arr.slice(2);
-    const slicedArrayStr = slicedArray.toString();
-    console.assert(slicedArrayStr === '4,5');
+    console.assert(slicedArray.toString() === '4,5');
 
     // the original array is unchanged for slice()
-    const arrStr = arr.toString();
-    console.assert(arrStr === '2,3,4,5');
+    console.assert(arr.toString() === '2,3,4,5');
 }
 
 function sliceTwoArgs() {
@@ -106,8 +104,7 @@ function sliceTwoArgs() {
     const newArr = arr.slice(1, 3);
 
     // verify that [3,4] were copied into the new array
-    const newArrStr = newArr.toString();
-    console.assert(newArrStr === '3,4');
+    console.assert(newArr.toString() === '3,4');
 }
 
 function splice() {
@@ -133,8 +130,7 @@ function spliceRestParameter() {
     // This leaves [2, 5]. The ...rest arguments are [6,7,8].
     // These are added at the splice point producing [2, 6, 7, 8, 5]
     arr.splice(1, 2, 6, 7, 8);
-    const arrText = arr.toString();
-    console.assert(arrText === '2,6,7,8,5');
+    console.assert(arr.toString() === '2,6,7,8,5');
 }
 
 function sort() {
@@ -149,7 +145,7 @@ function sortCompareFunction() {
     let arr = ['z', 'aaa', 'bb'];
 
     // sort by string length
-    arr.sort( (a, b) => a.length - b.length );
+    arr.sort((a, b) => a.length - b.length);
     console.assert(arr[0] === 'z');
     console.assert(arr[1] === 'bb');
     console.assert(arr[2] === 'aaa');
@@ -158,15 +154,13 @@ function sortCompareFunction() {
 function reverse() {
     let arr = [3, 2, 1];
     arr.reverse();
-    const arrText = arr.toString();
-    console.assert(arrText === '1,2,3');
+    console.assert(arr.toString() === '1,2,3');
 }
 
 function map() {
     const numbers = [2, 1, 3, 4];
     const square = numbers.map(elem => elem * elem);
-    const squareStr = square.toString();
-    console.assert(squareStr === '4,1,9,16');
+    console.assert(square.toString() === '4,1,9,16');
 }
 
 function filter() {
@@ -177,7 +171,7 @@ function filter() {
 
 function reduce() {
     const arr = [1, 2, 3, 4, 5];
-    const sum = arr.reduce( (total, value) => total += value);
+    const sum = arr.reduce((total, value) => total += value);
     console.assert(sum === 15);
 }
 
@@ -214,6 +208,19 @@ function iterate() {
     console.assert(elems.toString() === '1,2,3');
 }
 
+function equality() {
+    const a = [1, 2, 3];
+    const b = [1, 2, 3];
+
+    // arrays are objects, so === and !== compare references.
+    // given that a and b are different objects, this returns false
+    console.assert(a !== b);
+
+    // one technique is to compare using stringify() or toString()
+    console.assert(a.toString() === b.toString());
+    console.assert(JSON.stringify(a) === JSON.stringify(b));
+}
+
 function test() {
     push();
     pop();
@@ -236,6 +243,7 @@ function test() {
     some();
     constArray();
     iterate();
+    equality();
 }
 
 test();

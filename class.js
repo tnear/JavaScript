@@ -1,3 +1,9 @@
+/*
+Classes are a template for creating objects. They encapsulate data with
+code to work on that data.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+*/
+
 class Rectangle {
     // private properties are prefixed with '#' (hash names)
     #height = 0; // default value
@@ -8,7 +14,7 @@ class Rectangle {
         this.#height = height;
         this.#width = width;
 
-        // also create public properties
+        // can also create public properties
         this.publicHeight = height;
         this.publicWidth = width;
     }
@@ -32,11 +38,11 @@ class Rectangle {
 function test() {
     const rect = new Rectangle(5, 4);
 
-    // public fields (using private fields ('#') outside of 
+    // public fields (using private fields ('#') outside of
     // class definition throws a runtime error)
     console.assert(rect.publicHeight === 5);
     console.assert(rect.publicWidth === 4);
-    
+
     // 'get area' access via property
     console.assert(rect.area === 20);
 

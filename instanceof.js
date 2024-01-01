@@ -1,3 +1,9 @@
+/*
+The instanceof operator tests to see if the prototype property of a
+constructor appears anywhere in the prototype chain of an object.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
+*/
+
 class Person { } // used for testing
 
 function string() {
@@ -7,7 +13,7 @@ function string() {
 
     // false for assignment
     const str2 = 'hello2';
-    console.assert(!(str2 instanceof String));
+    console.assert(str2 instanceof String === false);
 }
 
 function classSyntax() {

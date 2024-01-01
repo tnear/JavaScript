@@ -1,3 +1,8 @@
+/*
+The Map object holds key-value pairs and remembers the original insertion order of the keys.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+*/
+
 function size() {
     let m = new Map();
     console.assert(m.size === 0);
@@ -9,16 +14,22 @@ function constructor() {
     console.assert(m.size === 2);
 }
 
+// set/add/insert values to map
 function add() {
     let m = new Map();
+
+    // values do not need to be the same data type
     m.set('A', 1);
     m.set('B', 2);
+    m.set('C', '3');
 
-    console.assert(m.size === 2);
+    console.assert(m.size === 3);
     console.assert(m.get('A', 1));
     console.assert(m.get('B', 2));
+    console.assert(m.get('C', '3'));
 }
 
+// delete (erase, remove) elements from map
 function deleteExample() {
     let m = new Map();
     m.set('A', 'B');
@@ -29,7 +40,8 @@ function deleteExample() {
     console.assert(m.size === 1);
 
     // delete on non-existent element does nothing
-    m.delete('C');
+    m.delete('FakeKey');
+    console.assert(m.size === 1);
 }
 
 function clear() {
@@ -37,7 +49,7 @@ function clear() {
     m.set('A', 1);
     m.set('B', 2);
 
-    // delete entries
+    // clear (delete) all entries
     m.clear();
     console.assert(m.size === 0);
 }
@@ -46,7 +58,7 @@ function has() {
     let m = new Map();
     m.set('A', 1);
 
-    // use 'has' to learn if container has an element
+    // use 'has' to learn if container has (contains) an element
     console.assert(m.has('A'));
     console.assert(!m.has('fake_key'));
 }
@@ -71,6 +83,7 @@ function entries() {
     console.assert(elems[3] === 2);
 }
 
+// keys() just returns the key (no value)
 function keys() {
     let m = new Map();
     m.set('A', 1);
@@ -86,6 +99,7 @@ function keys() {
     console.assert(keyList[1] === 'B');
 }
 
+// value() just returns the value (no key)
 function values() {
     let m = new Map();
     m.set('A', 1);

@@ -7,6 +7,7 @@ function nullLHS() {
     // x is null, so it is assigned to y's value
     x ??= y;
     console.assert(x === y);
+    console.assert(y === 1);
 }
 
 function nullRHS() {

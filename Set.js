@@ -50,7 +50,7 @@ function has() {
     let s = new Set();
     s.add('A');
 
-    // use 'has' to learn if container has an element
+    // use 'has' to learn if container has (contains) an element
     console.assert(s.has('A'));
     console.assert(!s.has('fake_key'));
 }
