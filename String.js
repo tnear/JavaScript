@@ -104,6 +104,7 @@ function match() {
     console.assert(arr[1] === 'l');
 }
 
+// check if a string includes (contains) a specified string
 function includes() {
     const str = 'hello';
 
@@ -135,6 +136,8 @@ Line 2`;
 
     console.assert(multiLineString === 'Line 1\nLine 2');
 }
+
+// for regular expressions, see RegEx.js
 
 function test() {
     slice();

@@ -22,6 +22,7 @@ function add() {
     console.assert(s.size === 2);
 }
 
+// delete (remove) elements from set
 function deleteExample() {
     let s = new Set();
     s.add('A');
@@ -32,7 +33,7 @@ function deleteExample() {
     console.assert(s.size === 1);
 
     // delete on non-existent element does nothing
-    s.delete('A');
+    s.delete('FakeKey');
     console.assert(s.size === 1);
 }
 
@@ -55,6 +56,7 @@ function has() {
     console.assert(!s.has('fake_key'));
 }
 
+// iterate through values
 function values() {
     let s = new Set();
     s.add(1);
