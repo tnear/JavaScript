@@ -1,6 +1,6 @@
 /*
 The global setTimeout() method sets a timer which executes a
-function once the timer expires. 
+function once the timer expires.
 https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 
 setTimeout(code)

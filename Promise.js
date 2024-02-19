@@ -25,7 +25,7 @@ function basic() {
     });
 
     // consuming code here. it waits for the execution of
-    // one of the two callbacks 
+    // one of the two callbacks
     myPromise.then(
         function (successResult) {
             console.log('Success: ' + successResult);

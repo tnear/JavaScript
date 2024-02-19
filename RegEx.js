@@ -44,7 +44,7 @@ function patternExec() {
 // string.match() returns an array of matches
 function match() {
     let text = 'hello world 234';
-    
+
     // create a pattern with a capture group
     let result = text.match(/([0-9]+)/);
     // capture groups are returned in result array
