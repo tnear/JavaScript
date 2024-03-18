@@ -7,7 +7,6 @@ https://www.w3schools.com/angular/angular_intro.asp
 Angular is distributed as a single JavaScript file which can be included using the `script` tag:
 
 ```js
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 ```
 
