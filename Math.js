@@ -20,8 +20,12 @@ function max() {
     const arr = [2, 1, 3, 0];
 
     // get maximum value of array
-    const maxValue = Math.max(...arr);
+    let maxValue = Math.max(...arr);
     console.assert(maxValue === 3);
+
+    // multiple arguments
+    maxValue = Math.max(3, 4, 2);
+    console.assert(maxValue === 4);
 }
 
 function test() {

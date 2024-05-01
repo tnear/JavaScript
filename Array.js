@@ -144,7 +144,7 @@ function sort() {
 function sortCompareFunction() {
     let arr = ['z', 'aaa', 'bb'];
 
-    // sort by string length
+    // sort by string length (shortest first)
     arr.sort((a, b) => a.length - b.length);
     console.assert(arr[0] === 'z');
     console.assert(arr[1] === 'bb');
@@ -221,6 +221,18 @@ function equality() {
     console.assert(JSON.stringify(a) === JSON.stringify(b));
 }
 
+function from() {
+    const mapVar = new Map([[1, 'a'], [2, 'b'], [3, 'c']]);
+    // convert map's values into an array
+
+    let valuesArray = Array.from(mapVar.values());
+    console.assert(valuesArray.toString() === 'a,b,c');
+
+    // spread syntax
+    valuesArray = [...mapVar.values()];
+    console.assert(valuesArray.toString() === 'a,b,c');
+}
+
 function test() {
     push();
     pop();
@@ -244,6 +256,7 @@ function test() {
     constArray();
     iterate();
     equality();
+    from();
 }
 
 test();

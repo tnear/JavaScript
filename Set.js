@@ -83,6 +83,17 @@ function iterate() {
     console.assert(result.toString() === 'a,b,c');
 }
 
+function spread() {
+    let nums = [3, 2, 2, 1, 4];
+
+    // insert every element of an array into the Set
+    const numsSet = new Set(nums);
+
+    // use spread operator again to convert all values to an array
+    let numsArray = [...numsSet.values()];
+    console.assert(numsArray.toString() === '3,2,1,4');
+}
+
 function test() {
     size();
     constructor();
@@ -92,6 +103,7 @@ function test() {
     has();
     values();
     iterate();
+    spread();
 }
 
 test();

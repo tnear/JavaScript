@@ -127,7 +127,7 @@ React event handlers are written in braces. The events are camel case (unlike HT
 
 ```html
 <!-- React syntax-->
-<button onClick={debug}>Click to debug</button> 
+<button onClick={debug}>Click to debug</button>
 
 <!--HTML syntax-->
 <button onnclick="debug()">Click to debug</button>

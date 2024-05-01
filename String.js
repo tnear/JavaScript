@@ -139,6 +139,14 @@ Line 2`;
 
 // for regular expressions, see RegEx.js
 
+function sort() {
+    // sorting strings requires splitting into an array of characters,
+    // sorting the array, then joining into a string
+    let s = 'testing';
+    let sortedS = s.split('').sort().join('');
+    console.assert(sortedS === 'eginstt');
+}
+
 function test() {
     slice();
     substring();
@@ -153,6 +161,7 @@ function test() {
     includes();
     startsWith();
     templateLiteral();
+    sort();
 }
 
 test();

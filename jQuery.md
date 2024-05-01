@@ -2,7 +2,7 @@
 
 jQuery is designed to simplify the client-side scripting of HTML. It makes things like HTML document traversal and manipulation, event handling, and animation simpler. jQuery can also create plugins on top of the JavaScript library.
 
-jQuery is distributed as a single JavaScript file. 
+jQuery is distributed as a single JavaScript file.
 
 ## Key Features
 
@@ -17,7 +17,7 @@ Instead of downloading and hosting jQuery yourself, there is an option to provid
 ```js
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head> 
+</head>
 ```
 
 ## Selection syntax
@@ -51,7 +51,7 @@ $("p").dblclick(function(){
 
 ### Chaining
 ```js
-$("#p1").css("color", "red").slideUp(2000).slideDown(2000); 
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
 ```
 
 ## Selecting elements
@@ -91,7 +91,7 @@ First, create a simple HTML file with a button to trigger the AJAX call and a `<
 <div id="data-container"></div>
 
 <script>
-    // jQuery code here. 
+    // jQuery code here.
     // (document).ready prevents any jQuery code from running before page finishes loading
 $(document).ready(function(){
     $('#fetch-data').click(function() {

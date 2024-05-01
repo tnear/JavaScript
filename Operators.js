@@ -35,7 +35,8 @@ function nullishCoalescingAssignmentNullRHS() {
     console.assert(x === 2);
 }
 
-// Spread operator (...)
+// The spread operator (...) allows an iterable, such as an array of string,
+// to be expanded in places where zero or more arguments are expected.
 function spreadOperatorFunctionArgs() {
     const sumFunction = (a, b, c) => a + b + c;
 
@@ -51,7 +52,10 @@ function spreadOperatorConcat() {
     const arr1 = [1, 2];
     const arr2 = [3, 4];
 
+    // concat arrays
     const arr3 = [...arr1, ...arr2];
+    // alt syntax:
+    // const arr3 = arr1.concat(arr2)
     console.assert(arr3.length === 4);
     console.assert(arr3[0] === 1);
     console.assert(arr3[1] === 2);
@@ -69,6 +73,12 @@ function spreadOperatorAssignment() {
     console.assert(rest.length === 2);
     console.assert(rest[0] === 3);
     console.assert(rest[1] === 4);
+}
+
+function spreadOperatorMap() {
+    const m = new Map([ [1, 'a'], [2, 'b'], [3, 'c'] ]);
+    const valuesArray =  [...m.values()];
+    console.assert(valuesArray.toString() === 'a,b,c');
 }
 
 // Optional chaining operator (?:)
@@ -105,6 +115,7 @@ function test() {
     spreadOperatorFunctionArgs();
     spreadOperatorConcat();
     spreadOperatorAssignment();
+    spreadOperatorMap();
     optionalChaining();
 }
 
