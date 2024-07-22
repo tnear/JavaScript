@@ -24,9 +24,9 @@ function add() {
     m.set('C', '3');
 
     console.assert(m.size === 3);
-    console.assert(m.get('A', 1));
-    console.assert(m.get('B', 2));
-    console.assert(m.get('C', '3'));
+    console.assert(m.get('A') === 1);
+    console.assert(m.get('B') === 2);
+    console.assert(m.get('C') === '3');
 }
 
 // delete (erase, remove) elements from map

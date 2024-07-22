@@ -11,6 +11,7 @@ async function f() {
     // same as:
     //return Promise.resolve('done!');
 }
+
 async function asyncAwait() {
     let promise = f();
 

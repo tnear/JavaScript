@@ -1,5 +1,5 @@
 # Angular
-Angular is a single-web application framework developed by Google.
+Angular is a single-page web application framework developed by Google.
 
 https://www.w3schools.com/angular/angular_intro.asp
 
@@ -20,7 +20,7 @@ Angular is distributed as a single JavaScript file which can be included using t
 **Built-in Solutions for Common Tasks**: Angular provides built-in solutions for common tasks such as form validation, routing, and state management.
 
 ## Components
-Angular components are TypeScript classes that are decorated with @Component. This decorator allows you to specify metadata about the component, including its selector, template, and styles.
+Angular components are TypeScript classes that are decorated with `@Component`. This decorator allows you to specify metadata about the component, including its selector, template, and styles.
 
 ```js
 import { Component } from '@angular/core';

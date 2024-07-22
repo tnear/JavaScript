@@ -158,7 +158,7 @@ Functions beginning with `use` are called *Hooks*. For example, `useState` is a 
 The `useState` hook allows tracking state in a function component. "State" refers to data or properties which require tracking for an application.
 
 ```js
-import { useState } form "react";
+import { useState } from "react";
 
 function FavoriteColor() {
     // initialize state returns two values:
@@ -171,7 +171,7 @@ function FavoriteColor() {
     return <h1>Current color is {color}</h1>
 }
 ```
-To update state, use the returned callback (do not set directly the new state, ex: `color = 'red'`:
+To update state, use the returned callback (do not set directly the new state, ex: `color = 'red'`):
 ```js
 function FavoriteColor() {
     // use setColor function to update state
